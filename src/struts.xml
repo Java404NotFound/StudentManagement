@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 配置常量 -->
+	<!-- 字符集 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<!-- 开发模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 主题 -->
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<!-- 扩展名 -->
+	<constant name="struts.action.extension" value="action"></constant>
+	<package name="book" namespace="/" extends="struts-default">
+		<action name="studentAction_*" class="com.rjxy.action.StudentAction"
+			method="{1}">
+			<result name="index">/index.jsp</result>
+			<result name="toindex">/toindex.jsp</result>
+			<result name="toStudentUp">/update.jsp</result>
+			<result name="toStudent">/toStudent.jsp</result>
+			<result name="toStudentName">/selectStudentName.jsp</result>
+			<result name="tobanji">/banji.jsp</result>
+		</action>
+	</package>
+
+
+
+</struts>
